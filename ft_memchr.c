@@ -6,7 +6,7 @@
 /*   By: vbychik <vbychik@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/01 20:21:22 by vbychik           #+#    #+#             */
-/*   Updated: 2024/06/01 20:47:10 by vbychik          ###   ########.fr       */
+/*   Updated: 2024/06/08 16:55:13 by vbychik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	i;
-	unsigned char	str;
+	unsigned char	*str;
+	size_t			i;
 	unsigned char	uc;
 
 	str = (unsigned char *) s;
