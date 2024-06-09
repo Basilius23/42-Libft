@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_mempcy.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vbychik <vbychik@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/29 20:05:13 by vbychik           #+#    #+#             */
-/*   Updated: 2024/05/29 20:18:09 by vbychik          ###   ########.fr       */
+/*   Created: 2024/06/09 14:41:59 by vbychik           #+#    #+#             */
+/*   Updated: 2024/06/09 14:47:36 by vbychik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_calloc(size_t count, size_t size)
 {
-	unsigned char	*tmp_dst;
-	unsigned char	*tmp_src;
+	unsigned char	*tmp;
+	size_t			i;
 
-	if (src == (void *)0 && dst == (void *)0)
-		return (dst);
-	tmp_dst = (unsigned char *) dst;
-	tmp_src = (unsigned char *) src;
-	while (n > 0)
-	{
-		*(tmp_dst++) = *(tmp_src++);
-		n--;
-	}
-	return (dst);
+	i = 0;
+	tmp = malloc(count * size);
+	if (!tmp)
+		return (NULL);
+	while (i < count * size)
+		tmp[i++] = 0;
+	return (tmp);
 }
