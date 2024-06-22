@@ -1,31 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vbychik <vbychik@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/01 20:21:22 by vbychik           #+#    #+#             */
-/*   Updated: 2024/06/01 20:47:10 by vbychik          ###   ########.fr       */
+/*   Created: 2024/06/09 15:16:10 by vbychik           #+#    #+#             */
+/*   Updated: 2024/06/22 22:22:03 by vbychik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	ft_strchr(const char *s, int c)
+char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
-	unsigned int	i;
-	char			cc;
+	size_t	i;
+	char	*str;
 
-	cc = (char) c;
+	if (!s)
+		return (NULL);
+	if (start > ft_strlen(s))
+		return (ft_strdup(""));
+	if (len > ft_strlen(s + start))
+		len = ft_strlen(s + start);
+	str = ft_calloc(len + 1, sizeof(char));
+	if (!str)
+		return (NULL);
 	i = 0;
-	while (s[i])
+	while (i < len)
 	{
-		if (s[i] == cc)
-			return ((char *) &s[i]);
+		str[i] = s[start + i];
 		i++;
 	}
-	if (s[i] == cc)
-		return ((char *) &s[i]);
-	return (NULL);
+	return (str);
 }
