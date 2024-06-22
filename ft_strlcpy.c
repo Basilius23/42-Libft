@@ -6,13 +6,13 @@
 /*   By: vbychik <vbychik@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/24 21:05:55 by vbychik           #+#    #+#             */
-/*   Updated: 2024/05/27 19:59:20 by vbychik          ###   ########.fr       */
+/*   Updated: 2024/06/22 13:14:45 by vbychik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	strlcpy(char *dest, const char *scr, size_t n)
+char	ft_strlcpy(char *dest, const char *scr, size_t n)
 {
 	size_t	i;
 

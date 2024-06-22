@@ -6,13 +6,13 @@
 /*   By: vbychik <vbychik@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 14:34:21 by vbychik           #+#    #+#             */
-/*   Updated: 2024/06/09 14:39:48 by vbychik          ###   ########.fr       */
+/*   Updated: 2024/06/22 13:15:56 by vbychik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*tf_strdup(const char *s1)
+char	*ft_strdup(const char *s1)
 {
 	char	*dest;
 	size_t	i;
