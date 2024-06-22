@@ -6,7 +6,7 @@
 #    By: vbychik <vbychik@student.42prague.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/22 16:39:42 by vbychik           #+#    #+#              #
-#    Updated: 2024/06/22 17:32:12 by vbychik          ###   ########.fr        #
+#    Updated: 2024/06/22 17:51:41 by vbychik          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,15 +51,15 @@ SRC =  ft_atoi.c \
 	ft_toupper.c \
 
 SRCS = $(wildcard * .c)
-OBJS = $(SRCS: .c = .o)
+OBJS = $(SRC: .c = .o)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	@ar rcs $(NAME) $(OBJS)
-	@@echo "Library $(NAME) created."
+	@echo "Library $(NAME) created."
 
-%.o: %.c
+.o.c:
 	@$(CC) $(CFLAGS) -c $< -o $@
 	@echo "Compiled $<"
 
