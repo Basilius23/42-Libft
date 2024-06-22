@@ -6,7 +6,7 @@
 #    By: vbychik <vbychik@student.42prague.com>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/22 16:39:42 by vbychik           #+#    #+#              #
-#    Updated: 2024/06/22 17:17:40 by vbychik          ###   ########.fr        #
+#    Updated: 2024/06/22 17:32:12 by vbychik          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,40 +15,43 @@ HEADER = libft.h
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -g
 AR = ar rcs
-SRC =  ft_atoi \
-	ft_bzero \
-	ft_calloc \
-	ft_isalnum \
-	ft_isalpha \
-	ft_isascii \
-	ft_isdigit \
-	ft_isprint \
-	ft_itoa \
-	ft_memchr \
-	ft_memcmp \
-	ft_memcpy \
-	ft_memmove \
-	ft_memset \
-	ft_putchar_fd \
-	ft_putendl_fd \
-	ft_putnbr_fd \
-	ft_putstr_fd \
-	ft_split \
-	ft_strchr \
-	ft_strdup \
-	ft_striteri \
-	ft_strjoin \
-	ft_strlcat \
-	ft_strlcpy \
-	ft_strlen \
-	ft_strmapi \
-	ft_strncmp \
-	ft_strnstr \
-	ft_strrchr \
-	ft_strtrim \
-	ft_substr \
-	ft_tolower \
-	ft_toupper \
+SRC =  ft_atoi.c \
+	ft_bzero.c \
+	ft_calloc.c \
+	ft_isalnum.c \
+	ft_isalpha.c \
+	ft_isascii.c \
+	ft_isdigit.c \
+	ft_isprint.c \
+	ft_itoa.c \
+	ft_memchr.c \
+	ft_memcmp.c \
+	ft_memcpy.c \
+	ft_memmove.c \
+	ft_memset.c \
+	ft_putchar_fd.c \
+	ft_putendl_fd.c \
+	ft_putnbr_fd.c \
+	ft_putstr_fd.c \
+	ft_split.c \
+	ft_strchr.c \
+	ft_strdup.c \
+	ft_striteri.c \
+	ft_strjoin.c \
+	ft_strlcat.c \
+	ft_strlcpy.c \
+	ft_strlen.c \
+	ft_strmapi.c \
+	ft_strncmp.c \
+	ft_strnstr.c \
+	ft_strrchr.c \
+	ft_strtrim.c \
+	ft_substr.c \
+	ft_tolower.c \
+	ft_toupper.c \
+
+SRCS = $(wildcard * .c)
+OBJS = $(SRCS: .c = .o)
 
 all: $(NAME)
 
