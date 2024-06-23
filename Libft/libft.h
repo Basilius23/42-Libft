@@ -6,7 +6,7 @@
 /*   By: vbychik <vbychik@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/22 12:30:06 by vbychik           #+#    #+#             */
-/*   Updated: 2024/06/22 19:24:10 by vbychik          ###   ########.fr       */
+/*   Updated: 2024/06/23 11:13:58 by vbychik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <unistd.h>
 # include <string.h>
 # include <stdlib.h>
+# include <stdint.h>
 
 // Mandatory Part 1
 int		ft_isalpha(int i);

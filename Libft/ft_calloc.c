@@ -6,7 +6,7 @@
 /*   By: vbychik <vbychik@student.42prague.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/09 14:41:59 by vbychik           #+#    #+#             */
-/*   Updated: 2024/06/22 22:22:13 by vbychik          ###   ########.fr       */
+/*   Updated: 2024/06/23 11:11:12 by vbychik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,13 @@ void	*ft_calloc(size_t count, size_t size)
 	unsigned char	*tmp;
 	size_t			i;
 
+	if (count != 0 && size > SIZE_MAX / count)
+		return (NULL);
+	if (count == 0 || size == 0)
+	{
+		count = 1;
+		size = 1;
+	}
 	i = 0;
 	tmp = malloc(count * size);
 	if (!tmp)
